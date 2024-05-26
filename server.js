@@ -4,6 +4,7 @@ const path = require('path');
 
 // Import the api router
 const api = require('./routes/api');
+const html = require('./routes/html');
 
 // Specify on which port the Express.js server will run
 const PORT = process.env.PORT || 3001;
@@ -18,13 +19,8 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// let the app use api routes
+// let the app use api and html routes
 app.use('/api', api);
-
-// get route for notes page
-app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, '/public/notes.html')));
-
-// if anything else is typed after the / in the url, it will navigates back to home page
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, '/public/index.html')));
+app.use('/', html);
 
 app.listen(PORT, () => console.log(`App listening at http://localhost:${PORT} 🚀`));
