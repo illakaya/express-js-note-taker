@@ -32,7 +32,7 @@ No special instructions are need to view the application.
 
 Thank you to:
 
-- The Coding Bootcamp at the University of Sydney for providing a project for students to develop their understanding of Express.js
+- The Coding Bootcamp at the University of Sydney for providing a project for students to develop their understanding of Express.js and the fsUtils file from 11-Express 21-Ins_Modular-Routing was referenced heavily for the fsHelpers file
 - Instructor Frank Fu and teacher assistant Sean Butcher for providing the foundational knowledge required to attempt the project
 
 ## License
