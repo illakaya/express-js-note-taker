@@ -31,6 +31,9 @@ api.post('/notes', (req, res) => {
             id: uuidv4(), // Generates a unique ID for the new note
         };
         readAndAppend(db, newNote);
+        res.json('Note added successfully');
+    } else {
+        res.error('Error occurred whilst adding new note');
     }
 });
 
